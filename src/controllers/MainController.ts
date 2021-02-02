@@ -1,4 +1,6 @@
-export class MainController {
+import { BaseController } from "./BaseController";
+
+export class MainController extends BaseController{
     public createView(): HTMLDivElement {
         const container = document.createElement('div');
 

@@ -1,4 +1,6 @@
-export class LoginController {
+import { BaseController } from "./BaseController";
+
+export class LoginController extends BaseController{
   public createView(): HTMLDivElement {
     const container = document.createElement("div");
 
