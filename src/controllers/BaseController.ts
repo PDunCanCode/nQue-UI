@@ -1,7 +1,7 @@
 import { Router } from "../Router";
 
 export abstract class BaseController {
-  protected container = document.createElement("div");
+  protected container = this.createElement("div");
   protected router: Router;
 
   public constructor(router: Router) {

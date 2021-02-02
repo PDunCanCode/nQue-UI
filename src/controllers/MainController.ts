@@ -1,20 +1,16 @@
 import { BaseController } from "./BaseController";
 
-export class MainController extends BaseController{
-    public createView(): HTMLDivElement {
-        const container = document.createElement('div');
+export class MainController extends BaseController {
+  public createView(): HTMLDivElement {
+    const title = this.createElement("h2", "Welcome to the Main Page!");
 
-        const title = document.createElement('h2');
-        title.innerText = 'Welcome to the Main Page!';
+    const article = document.createElement("div");
+    article.innerText = "Filler Text goes here";
 
-        const article = document.createElement("div")
-        article.innerText = 'Filler Text goes here';
+    const button = this.createElement("button", "Login");
 
-        const button = document.createElement('button');
-        button.innerText = 'Login';
+    this.container.append(title, article, button);
 
-        container.append(title, article, button);
-
-        return container;
-    }
+    return this.container;
+  }
 }
