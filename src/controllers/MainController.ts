@@ -7,7 +7,9 @@ export class MainController extends BaseController {
     const article = document.createElement("div");
     article.innerText = "Filler Text goes here";
 
-    const button = this.createElement("button", "Login");
+    const button = this.createElement("button", "Login", () => {
+      this.router.switchToLoginView();
+    });
 
     this.container.append(title, article, button);
 
